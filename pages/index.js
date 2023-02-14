@@ -4,8 +4,8 @@ import styles from "../styles/Home.module.css";
 
 export default function Home() {
   useEffect(() => {
-    const condition =
-      typeof navigator !== "undefined" ? navigator.userAgent.includes("Instagram") : undefined;
+    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    const condition = /android/i.test(userAgent) && navigator.userAgent.includes("Instagram");
     if (condition) {
       document.write(
         '<a target="_blank" href="https://nextjs-blog-seven-psi-21.vercel.app" download id="open-browser-url"></a>'
