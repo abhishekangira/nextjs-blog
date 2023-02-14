@@ -2,8 +2,17 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
+  useEffect(() => {
+    navigator.userAgent.includes("Instagram");
+  }, []);
+
   return (
     <div className={styles.container}>
+      {navigator.userAgent.includes("Instagram") && (
+        <a href={location.href} target="_blank" download>
+          Open in browser
+        </a>
+      )}
       <Head>
         <title>My Cool App</title>
         <link rel="icon" href="/favicon.ico" />
