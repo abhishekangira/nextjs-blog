@@ -2,9 +2,11 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
+  const condition =
+    typeof navigator !== "undefined" ? navigator.userAgent.includes("Instagram") : undefined;
   return (
     <div className={styles.container}>
-      {navigator.userAgent.includes("Instagram") && (
+      {condition && (
         <a href={location.href} target="_blank" download>
           Open in browser
         </a>
