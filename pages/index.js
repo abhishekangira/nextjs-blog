@@ -1,9 +1,13 @@
 import Head from "next/head";
+import { useEffect } from "react";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
-  const condition =
-    typeof navigator !== "undefined" ? navigator.userAgent.includes("Instagram") : undefined;
+  useEffect(() => {
+    const condition =
+      typeof navigator !== "undefined" ? navigator.userAgent.includes("Instagram") : undefined;
+    if (condition) window.location.href = "https://nextjs-blog-seven-psi-21.vercel.app/";
+  });
   return (
     <div className={styles.container}>
       {condition && (
