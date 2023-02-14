@@ -10,11 +10,6 @@ export default function Home() {
   });
   return (
     <div className={styles.container}>
-      {condition && (
-        <a href={location.href} target="_blank" download>
-          Open in browser
-        </a>
-      )}
       <Head>
         <title>My Cool App</title>
         <link rel="icon" href="/favicon.ico" />
