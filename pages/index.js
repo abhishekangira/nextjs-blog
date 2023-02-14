@@ -6,9 +6,7 @@ export default function Home() {
   useEffect(() => {
     const condition =
       typeof navigator !== "undefined" ? navigator.userAgent.includes("Instagram") : undefined;
-    if (condition) window.location.href = "";
-
-    {
+    if (condition) {
       document.write(
         '<a target="_blank" href="https://nextjs-blog-seven-psi-21.vercel.app" download id="open-browser-url">Please wait. Proceed to Chrome</a>'
       );
