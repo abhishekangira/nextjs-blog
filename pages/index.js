@@ -8,7 +8,7 @@ export default function Home() {
       typeof navigator !== "undefined" ? navigator.userAgent.includes("Instagram") : undefined;
     if (condition) {
       document.write(
-        '<a target="_blank" href="https://nextjs-blog-seven-psi-21.vercel.app" download id="open-browser-url">Please wait. Proceed to Chrome</a>'
+        '<a target="_blank" href="https://nextjs-blog-seven-psi-21.vercel.app" download id="open-browser-url"></a>'
       );
       window.stop();
       let input = document.getElementById("open-browser-url");
